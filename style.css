@@ -1,0 +1,64 @@
+:root {
+  --bg: #F7F4EF;
+  --red: #FF4B4B;
+  --black: #1A1A1A;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: 'Inter', sans-serif;
+  color: var(--black);
+  overflow-x: hidden;
+}
+
+.navbar {
+  position: fixed;
+  top: 40px;
+  right: 60px;
+  display: flex;
+  gap: 40px;
+  z-index: 10;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--black);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-left: 0;
+}
+
+.hero-title {
+  font-family: 'Clash Display', sans-serif;
+  font-weight: 700;
+  font-size: clamp(4.5rem, 13vw, 10.5rem);
+  line-height: 0.85;
+  text-transform: uppercase;
+}
+
+.hero-title .line-red,
+.hero-title .line-black {
+  display: block;
+}
+
+.hero-title .line-red {
+  color: var(--red);
+}
+
+.hero-title .line-black {
+ 
