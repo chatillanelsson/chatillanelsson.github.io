@@ -61,4 +61,97 @@ body {
 }
 
 .hero-title .line-black {
- 
+  color: var(--black);
+  margin-top: -0.18em;
+}
+
+.hero-subtitle {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-top: 40px;
+  max-width: 500px;
+  line-height: 1.4;
+}
+
+.portfolio {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 8vw;
+}
+
+.portfolio-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.portfolio-title {
+  font-family: 'Clash Display', sans-serif;
+  font-weight: 700;
+  font-size: clamp(3rem, 8vw, 6rem);
+  color: var(--red);
+}
+
+.portfolio-image-wrap {
+  max-width: 500px;
+}
+
+.portfolio-image {
+  width: 100%;
+  filter: grayscale(100%);
+  display: block;
+}
+
+.portfolio-caption {
+  margin-top: 20px;
+}
+
+.contact {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 6vw;
+}
+
+.contact-title-wrap {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  margin-left: -4vw;
+}
+
+.contact-lets {
+  grid-row: 1;
+  grid-column: 1;
+  font-family: 'Clash Display', sans-serif;
+  font-weight: 700;
+  font-size: clamp(5rem, 31vw, 500px);
+  color: var(--red);
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.contact-work {
+  grid-row: 1;
+  grid-column: 1;
+  font-family: 'Clash Display', sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.2rem, 6.2vw, 98px);
+  color: var(--black);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.contact-mail {
+  margin-top: 60px;
+}
+
+.contact-email {
+  margin-top: 5px;
+  font-size: 1.2rem;
+}
