@@ -1,157 +1,303 @@
-:root {
-  --bg: #F7F4EF;
-  --red: #FF4B4B;
-  --black: #1A1A1A;
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("https://api.fontshare.com/v2/css?f[]=clash-display@700&display=swap");
 }
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  background-color: var(--bg);
-  font-family: 'Inter', sans-serif;
-  color: var(--black);
+  margin: 0;
+  min-height: 100vh;
+  background-color: #FADCDD;
+  font-family: "Clash Display", "Inter", Arial, sans-serif;
+  position: relative;
   overflow-x: hidden;
 }
 
-.navbar {
+/* --- Top navigation --- */
+
+.top-nav {
   position: fixed;
-  top: 40px;
-  right: 60px;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
-  gap: 40px;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  background-color: #FADCDD;
   z-index: 10;
 }
 
-.navbar a {
-  text-decoration: none;
-  color: var(--black);
+.top-nav a {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 700;
   font-size: 1.1rem;
-  font-weight: 500;
+  color: #1A1A1A;
+  text-decoration: none;
 }
 
+/* --- Hero section --- */
+
 .hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 6rem;
+  box-sizing: border-box;
+}
+
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title h1 {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  position: relative;
+}
+
+.hero-title h1.growth {
+  color: #FF4B4B;
+  font-size: clamp(5rem, 14vw, 11rem);
+  z-index: 2;
+}
+
+.hero-title h1.marketing {
+  color: #1A1A1A;
+  font-size: clamp(4.2rem, 12vw, 9.3rem);
+  z-index: 1;
+  margin-top: -6rem;
+}
+
+.subtitle {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #1A1A1A;
+  text-align: center;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* --- Reusable pill background --- */
+
+.pill {
+  display: inline-block;
+  background-color: #FFA3A3;
+  border-radius: 999px;
+  padding: 1rem 3rem;
+  margin: 0 auto 2rem auto;
+  width: fit-content;
+}
+
+/* --- About section --- */
+
+.about {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.about-pill {
+  margin-bottom: 2.5rem;
+}
+
+.about-title {
+  color: #FF4B4B;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  margin: 0;
+}
+
+.about-text {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #1A1A1A;
+  max-width: 700px;
+  margin: 0;
+}
+
+/* --- Why Growth Marketing section --- */
+
+.why {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+  padding: 8rem 4rem 4rem 4rem;
+  box-sizing: border-box;
+}
+
+.why-pill {
+  margin-bottom: 2rem;
+}
+
+.why-title {
+  color: #FF4B4B;
+  font-weight: 700;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 1.05;
+  margin: 0;
+}
+
+.why-text {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #1A1A1A;
+  max-width: 550px;
+}
+
+.why-right {
+  margin-top: 12rem;
+}
+
+.berghs-pill {
+  margin-bottom: 1.5rem;
+}
+
+.why-subtitle {
+  color: #FF4B4B;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin: 0;
+}
+
+.why-subtext {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #1A1A1A;
+  max-width: 450px;
+}
+
+/* --- Contact section --- */
+
+.contact {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-left: 0;
+  padding: 6rem 2rem;
+  box-sizing: border-box;
 }
 
-.hero-title {
-  font-family: 'Clash Display', sans-serif;
+.contact-title {
+  color: #FF4B4B;
   font-weight: 700;
-  font-size: clamp(4.5rem, 13vw, 10.5rem);
-  line-height: 0.85;
-  text-transform: uppercase;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  margin: 0 0 1rem 0;
 }
 
-.hero-title .line-red,
-.hero-title .line-black {
-  display: block;
-}
-
-.hero-title .line-red {
-  color: var(--red);
-}
-
-.hero-title .line-black {
-  color: var(--black);
-  margin-top: -0.18em;
-}
-
-.hero-subtitle {
-  font-weight: 700;
-  font-size: 1.3rem;
-  margin-top: 40px;
-  max-width: 500px;
-  line-height: 1.4;
-}
-
-.portfolio {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 0 8vw;
-}
-
-.portfolio-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  flex-wrap: wrap;
-  gap: 60px;
-}
-
-.portfolio-title {
-  font-family: 'Clash Display', sans-serif;
-  font-weight: 700;
-  font-size: clamp(3rem, 8vw, 6rem);
-  color: var(--red);
-}
-
-.portfolio-image-wrap {
-  max-width: 500px;
-}
-
-.portfolio-image {
-  width: 100%;
-  filter: grayscale(100%);
-  display: block;
-}
-
-.portfolio-caption {
-  margin-top: 20px;
-}
-
-.contact {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 6vw;
-}
-
-.contact-title-wrap {
-  display: grid;
-  place-items: center;
-  width: 100%;
-  margin-left: -4vw;
-}
-
-.contact-lets {
-  grid-row: 1;
-  grid-column: 1;
-  font-family: 'Clash Display', sans-serif;
-  font-weight: 700;
-  font-size: clamp(5rem, 31vw, 500px);
-  color: var(--red);
-  text-transform: uppercase;
-  line-height: 1;
-}
-
-.contact-work {
-  grid-row: 1;
-  grid-column: 1;
-  font-family: 'Clash Display', sans-serif;
-  font-weight: 600;
-  font-size: clamp(1.2rem, 6.2vw, 98px);
-  color: var(--black);
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.contact-mail {
-  margin-top: 60px;
+.contact-text {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 1.2rem;
+  color: #1A1A1A;
+  margin: 0 0 1.5rem 0;
 }
 
 .contact-email {
-  margin-top: 5px;
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 700;
   font-size: 1.2rem;
+  color: #FF4B4B;
+  text-decoration: underline;
+}
+
+/* --- Mobile adjustments --- */
+
+@media (max-width: 900px) {
+  .top-nav {
+    padding: 1.5rem 2rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .why {
+    grid-template-columns: 1fr;
+  }
+  .why-right {
+    margin-top: 2rem;
+  }
+  .pill {
+    padding: 0.8rem 2rem;
+  }
+}
+.contact {
+  position: relative;
+}
+
+.contact-footer {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 4rem;
+}
+
+.footer-linkedin {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1A1A1A;
+  text-decoration: none;
+}
+
+.footer-info {
+  text-align: right;
+}
+
+.footer-name {
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1A1A1A;
+  margin: 0;
+}
+
+.footer-email {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 0.9rem;
+  color: #1A1A1A;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .contact-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 2rem;
+    position: static;
+    margin-top: 3rem;
+  }
+  .footer-info {
+    text-align: center;
+  }
 }
