@@ -339,4 +339,137 @@ em {
   font-weight: 700;
   letter-spacing: 0.06em;
   color: #888;
-  margi
+  margin-bottom: 1rem;
+}
+
+.case-content h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.case-desc {
+  color: #555;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  max-width: 520px;
+}
+
+.case-arrow {
+  font-size: 1.4rem;
+  color: #d3572f;
+  transition: transform 0.3s ease;
+}
+
+.case-item:hover .case-arrow {
+  transform: translate(4px, -4px);
+}
+
+.skills-list {
+  margin-top: 2.5rem;
+}
+
+.skill-row {
+  display: grid;
+  grid-template-columns: 50px 1fr auto;
+  align-items: baseline;
+  gap: 1.2rem;
+  padding: 1.3rem 0;
+  border-top: 1px solid rgba(26,21,18,0.15);
+}
+
+.skill-row:last-child {
+  border-bottom: 1px solid rgba(26,21,18,0.15);
+}
+
+.skill-index {
+  font-family: 'Fraunces', serif;
+  color: #d3572f;
+  font-weight: 600;
+}
+
+.skill-row h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.skill-row p {
+  color: #888;
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+.closing-line {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  margin-top: 4rem;
+  line-height: 1.1;
+}
+
+.contact-section {
+  background: #1a1512;
+  color: #fdfbf7;
+  max-width: 100%;
+  padding: 7rem 3rem;
+}
+
+.contact-section .section-num {
+  color: #ff8f66;
+}
+
+.contact-section .section-title em {
+  color: #ff8f66;
+}
+
+.contact-section .cta-link {
+  color: #fdfbf7;
+  border-bottom-color: #ff8f66;
+}
+
+.contact-section .cta-link:hover {
+  color: #ff8f66;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+  background: #1a1512;
+  color: rgba(253,251,247,0.5);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.footer a {
+  color: rgba(253,251,247,0.5);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #ff8f66;
+}
+
+@media (max-width: 850px) {
+  .top-nav {
+    padding: 1.2rem 1.5rem;
+  }
+  .nav-links {
+    gap: 1.1rem;
+  }
+  .hero, .section, .contact-section, .footer {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .resume-row, .case-item, .skill-row {
+    grid-template-columns: 1fr;
+  }
+  .skill-row p {
+    text-align: left;
+  }
+  .footer {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+}
