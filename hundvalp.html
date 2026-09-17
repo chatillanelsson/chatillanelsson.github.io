@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skilsmässa eller hundvalp? — Chatilla Nelsson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="style.css" rel="stylesheet" />
+<link href="case.css" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="top-nav">
+    <a href="index.html" class="nav-logo">← BACK TO PORTFOLIO</a>
+    <div class="nav-links">
+      <a href="index.html#about">ABOUT ME</a>
+      <a href="index.html#education">EDUCATION</a>
+      <a href="index.html#contact">CONTACT</a>
+    </div>
+  </nav>
+
+  <header class="case-hero">
+    <p class="section-num">DATA STORY</p>
+    <h1 class="case-hero-title">Skilsmässa eller<br>hundvalp?</h1>
+    <p class="case-hero-sub"><em>I dessa svenska kommuner håller kärleken nästan dubbelt så länge</em></p>
+    <p class="case-hero-body">Vi jämförde hundtäthet och äktenskapslängd i elva svenska kommuner. Sambandet var starkare än vi trodde — men förklaringen är inte den du tror.</p>
+
+    <div class="icon-row">
+      <div class="icon-item">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><circle cx="20" cy="10" r="7"/><line x1="20" y1="17" x2="20" y2="30"/></svg>
+        <span>Kärlek</span>
+      </div>
+      <div class="icon-item">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 20 L20 8 L34 20"/><path d="M10 18 V32 H30 V18"/><rect x="17" y="23" width="6" height="9"/></svg>
+        <span>Kommun</span>
+      </div>
+      <div class="icon-item">
+        <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="18" cy="22" rx="12" ry="7"/><circle cx="8" cy="16" r="5"/><path d="M28 18 Q34 14 34 20"/><line x1="10" y1="28" x2="8" y2="33"/><line x1="24" y1="28" x2="26" y2="33"/></svg>
+        <span>Hund</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <h2 class="section-title">Ju fler hundar i kommunen,<br>desto längre håller <em>äktenskapen.</em></h2>
+
+    <div class="chart-wrap">
+      <svg viewBox="0 0 640 400" class="chart-svg">
+        <line x1="60" y1="360" x2="620" y2="360" stroke="#1a1512" stroke-opacity="0.2"/>
+        <line x1="60" y1="20" x2="60" y2="360" stroke="#1a1512" stroke-opacity="0.2"/>
+        <g stroke="#1a1512" stroke-opacity="0.08">
+          <line x1="60" y1="275" x2="620" y2="275"/>
+          <line x1="60" y1="190" x2="620" y2="190"/>
+          <line x1="60" y1="105" x2="620" y2="105"/>
+          <line x1="60" y1="20" x2="620" y2="20"/>
+        </g>
+        <g font-family="Inter, sans-serif" font-size="11" fill="#888">
+          <text x="52" y="364" text-anchor="end">0</text>
+          <text x="52" y="279" text-anchor="end">5</text>
+          <text x="52" y="194" text-anchor="end">10</text>
+          <text x="52" y="109" text-anchor="end">15</text>
+          <text x="52" y="24" text-anchor="end">20</text>
+          <text x="60" y="378" text-anchor="middle">0</text>
+          <text x="235" y="378" text-anchor="middle">100</text>
+          <text x="410" y="378" text-anchor="middle">200</text>
+          <text x="585" y="378" text-anchor="middle">300</text>
+        </g>
+        <line x1="60" y1="207" x2="620" y2="71" stroke="#d3572f" stroke-width="2"/>
+        <g fill="#3d7a5c">
+          <circle cx="137" cy="202" r="5"/>
+          <circle cx="144" cy="183" r="5"/>
+          <circle cx="148" cy="180" r="5"/>
+          <circle cx="151" cy="178" r="5"/>
+          <circle cx="156" cy="182" r="5"/>
+          <circle cx="141" cy="190" r="5"/>
+          <circle cx="146" cy="193" r="5"/>
+          <circle cx="582" cy="29" r="6"/>
+          <circle cx="585" cy="132" r="6"/>
+        </g>
+        <g font-family="Fraunces, serif" font-size="13" font-weight="600" fill="#1a1512">
+          <text x="130" y="222">Sundbyberg</text>
+          <text x="592" y="24">Vilhelmina</text>
+          <text x="595" y="128">Härjedalen</text>
+        </g>
+        <text x="340" y="395" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#888">Hundar per 1 000 invånare</text>
+        <text x="-190" y="18" transform="rotate(-90)" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#888">Äktenskapslängd (år)</text>
+      </svg>
+      <p class="chart-caption">Hundar per 1 000 invånare (x) mot genomsnittlig äktenskapslängd i år (y). Varje punkt är en kommun. Källor: Jordbruksverket, SCB/MåBra.</p>
+    </div>
+
+    <div class="stat-trio">
+      <div class="stat-item">
+        <p class="resume-tag">KORRELATION</p>
+        <p class="stat-value">r ≈ 0,87</p>
+        <p class="stat-sub">r² ≈ 0,75 — mycket starkt samband i urvalet</p>
+      </div>
+      <div class="stat-item">
+        <p class="resume-tag">VILHELMINA</p>
+        <p class="stat-value">19,5 år</p>
+        <p class="stat-sub">298 hundar per 1 000 invånare</p>
+      </div>
+      <div class="stat-item">
+        <p class="resume-tag">SUNDBYBERG</p>
+        <p class="stat-value">9,3 år</p>
+        <p class="stat-sub">44 hundar per 1 000 invånare</p>
+      </div>
+    </div>
+
+    <p class="note-box"><strong>Viktigt att veta:</strong> siffrorna bygger på elva kommuner som fanns representerade i både Jordbruksverkets hundregister och SCB:s statistik via MåBra — inte samtliga 290. "Äktenskapslängd" avser hur länge de äktenskap som avslutats i skilsmässa i snitt varade, inte hur stor andel av äktenskapen som håller.</p>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Det är förmodligen inte hundarna.<br>Det är <em>var du bor.</em></h2>
+    <p class="section-body">
+      Innan någon börjar skaffa hund för relationens skull: sambandet ovan är med största sannolikhet inte orsak och verkan. Det som faktiskt styr är en betydligt mer väntad faktor — stad kontra glesbygd — som råkar påverka både hundhållning och äktenskapsmönster samtidigt, utan att de två har något direkt med varandra att göra.
+    </p>
+    <p class="section-body" style="margin-top: 1.5rem;">
+      Det finns dessutom en faktor till som sällan nämns i den här typen av jämförelser, men som borde: ålder. Glesbygdskommuner har generellt en äldre befolkning, och äldre årskullar har haft mer tid på sig att antingen skiljas sent eller stanna länge i sina äktenskap — vilket i sig drar upp genomsnittet oavsett hundinnehav.
+    </p>
+
+    <blockquote class="pull-quote">»Det här är inte en svaghet i granskningen — det är den mest intressanta delen av den.«</blockquote>
+
+    <div class="info-cards-row">
+      <div class="info-card">
+        <div class="info-card-icons">
+          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><circle cx="14" cy="10" r="6"/><line x1="14" y1="16" x2="14" y2="26"/></svg>
+          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 20 L32 12 L32 26 L22 26 Z"/></svg>
+        </div>
+        <h3>Glesbygd</h3>
+        <p>Gott om utrymme för hund, äldre befolkning, andra bosättnings- och familjemönster.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-icons">
+          <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><rect x="12" y="8" width="16" height="24" rx="1"/><line x1="16" y1="13" x2="18" y2="13"/><line x1="22" y1="13" x2="24" y2="13"/><line x1="16" y1="19" x2="18" y2="19"/><line x1="22" y1="19" x2="24" y2="19"/></svg>
+        </div>
+        <h3>Storstad</h3>
+        <p>Trångboddhet gör hundhållning svårare — skilsmässofrekvensen historiskt högre.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Var ligger <em>din</em> kommun?</h2>
+    <p class="section-body">
+      Oavsett förklaring är frågan i sig lätt att relatera till: var i Sverige håller kärleken längst, och varför? Det är den typen av "det handlar om mig och min ort"-nyfikenhet som gör den här typen av analys delbar snarare än bara läsbar.
+    </p>
+
+    <div class="sources-list">
+      <p class="resume-tag" style="margin-bottom: 1rem;">KÄLLOR</p>
+      <div class="source-row">Jordbruksverket — Statistik ur hundregistret</div>
+      <div class="source-row">MåBra — "Här varar äktenskapen längst respektive kortast" (baserat på SCB-data)</div>
+      <div class="source-row">SCB Statistikdatabasen — Giftemål och skilsmässor per region</div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>CHATILLA NELSSON PORTFOLIO © 2026</span>
+    <a href="index.html#education">← BACK TO EDUCATION</a>
+  </footer>
+
+</body>
+</html>
