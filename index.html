@@ -67,7 +67,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <p>Growth Marketing</p>
         <p class="resume-year">2026</p>
-        <div class="mini-panel" id="berghs-panel" hidden>
+        <div class="mini-panel" id="berghs-panel" aria-hidden="true">
           <p>Interested in developing within marketing or communication? Do like I did and apply to Berghs.</p>
           <a href="https://www.berghs.se/en/" target="_blank" rel="noopener noreferrer" class="cta-link">VISIT BERGHS ↗</a>
         </div>
@@ -165,7 +165,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       btn.addEventListener('click', () => {
         const isOpen = btn.getAttribute('aria-expanded') === 'true';
         btn.setAttribute('aria-expanded', String(!isOpen));
-        panel.hidden = isOpen;
+        panel.classList.toggle('is-open', !isOpen);
+        panel.setAttribute('aria-hidden', String(isOpen));
         btn.textContent = isOpen ? '+' : '\u2212';
       });
     });
