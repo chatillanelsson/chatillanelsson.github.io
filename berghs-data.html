@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rådata: Reklambyrå-scraping — Chatilla Nelsson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="style.css" rel="stylesheet" />
+<link href="case.css" rel="stylesheet" />
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T22N5GX7');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T22N5GX7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  <nav class="top-nav">
+    <a href="index.html" class="nav-logo">← BACK TO PORTFOLIO</a>
+    <div class="nav-links">
+      <a href="index.html#about">ABOUT ME</a>
+      <a href="index.html#education">EDUCATION</a>
+      <a href="index.html#contact">CONTACT</a>
+    </div>
+  </nav>
+
+  <header class="case-hero">
+    <p class="section-num">CREATIVITY MEETS CUSTOMER DATA</p>
+    <h1 class="case-hero-title">Rådata från<br><em>reklambyrå-scrapingen.</em></h1>
+    <p class="case-hero-sub">125 svenska reklambyråer, hämtade och strukturerade med kod.</p>
+    <p class="case-hero-body">En del av arbetet från Berghs SOC: att kombinera kod och data för att bygga strukturerade kundlistor. Här är resultatet och scriptet bakom det, precis som de ser ut, utan filter.</p>
+  </header>
+
+  <section class="section">
+    <h2 class="section-title">Välj en fil<br>att <em>öppna.</em></h2>
+    <p class="section-body">Två filer från samma projekt: den insamlade företagsdatan och Node.js-scriptet som samlade in den.</p>
+
+    <div class="file-btn-row">
+      <button class="file-btn active" type="button" data-file="data" data-path="scraping/data.txt" data-label="126 rader · insamlad företagsdata">
+        <span class="file-btn-icon">txt</span>
+        <span class="file-btn-info">
+          <strong>data.txt</strong>
+          <span>126 rader · insamlad företagsdata</span>
+        </span>
+      </button>
+      <button class="file-btn" type="button" data-file="scraper" data-path="scraping/scraper.txt" data-label="Node.js-scriptet bakom datan">
+        <span class="file-btn-icon">js</span>
+        <span class="file-btn-info">
+          <strong>scraper.txt</strong>
+          <span>Node.js-scriptet bakom datan</span>
+        </span>
+      </button>
+    </div>
+
+    <div class="raw-viewer">
+      <div class="raw-viewer-head">
+        <span class="raw-viewer-name" id="raw-filename">data.txt</span>
+        <a class="raw-viewer-link" id="raw-open-link" href="scraping/data.txt" target="_blank" rel="noopener noreferrer">ÖPPNA RÅFIL ↗</a>
+      </div>
+      <pre class="raw-content" id="raw-content">Laddar…</pre>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>CHATILLA NELSSON PORTFOLIO © 2026</span>
+    <a href="index.html#education">← BACK TO EDUCATION</a>
+  </footer>
+
+  <script>
+    const fileButtons = document.querySelectorAll('.file-btn');
+    const rawContent = document.getElementById('raw-content');
+    const rawFilename = document.getElementById('raw-filename');
+    const rawOpenLink = document.getElementById('raw-open-link');
+    const cache = {};
+
+    async function loadFile(btn) {
+      const path = btn.getAttribute('data-path');
+      const name = path.split('/').pop();
+
+      fileButtons.forEach(b => b.classList.toggle('active', b === btn));
+      rawFilename.textContent = name;
+      rawOpenLink.setAttribute('href', path);
+
+      if (cache[path]) {
+        rawContent.textContent = cache[path];
+        return;
+      }
+
+      rawContent.textContent = 'Laddar…';
+      try {
+        const response = await fetch(path, { cache: 'no-store' });
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        const text = await response.text();
+        cache[path] = text;
+        rawContent.textContent = text;
+      } catch (err) {
+        rawContent.textContent = 'Kunde inte läsa filen här. Öppna den via "ÖPPNA RÅFIL ↗" ovan.';
+      }
+    }
+
+    fileButtons.forEach(btn => {
+      btn.addEventListener('click', () => loadFile(btn));
+    });
+
+    loadFile(fileButtons[0]);
+  </script>
+
+</body>
+</html>

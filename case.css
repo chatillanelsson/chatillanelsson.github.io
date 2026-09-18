@@ -177,6 +177,126 @@
   border-bottom: 1px solid rgba(26,21,18,0.15);
 }
 
+.file-btn-row {
+  display: flex;
+  gap: 1.2rem;
+  margin: 2.5rem 0 2.5rem;
+  flex-wrap: wrap;
+}
+
+.file-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 1.4rem;
+  border: 1.5px solid rgba(26,21,18,0.15);
+  border-radius: 14px;
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.file-btn:hover {
+  border-color: #d3572f;
+  transform: translateY(-2px);
+}
+
+.file-btn.active {
+  border-color: #d3572f;
+  background: rgba(211, 87, 47, 0.06);
+}
+
+.file-btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 10px;
+  background: #1a1512;
+  color: #fdfbf7;
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+
+.file-btn.active .file-btn-icon {
+  background: #d3572f;
+}
+
+.file-btn-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.file-btn-info strong {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1512;
+}
+
+.file-btn-info span {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.raw-viewer {
+  border: 1px solid rgba(26,21,18,0.15);
+  border-radius: 14px;
+  overflow: hidden;
+  max-width: 900px;
+}
+
+.raw-viewer-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.9rem 1.4rem;
+  background: #1a1512;
+}
+
+.raw-viewer-name {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #fdfbf7;
+}
+
+.raw-viewer-link {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #ff8f66;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.raw-viewer-link:hover {
+  color: #fdfbf7;
+}
+
+.raw-content {
+  margin: 0;
+  padding: 1.6rem;
+  background: #fdfbf7;
+  color: #1a1512;
+  font-family: 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.8rem;
+  line-height: 1.65;
+  white-space: pre;
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 520px;
+}
+
 @media (max-width: 850px) {
   .case-hero {
     padding: 7rem 1.5rem 2rem;
@@ -186,5 +306,14 @@
   }
   .icon-row {
     gap: 1.5rem;
+  }
+  .file-btn-row {
+    flex-direction: column;
+  }
+  .file-btn {
+    width: 100%;
+  }
+  .raw-content {
+    font-size: 0.72rem;
   }
 }
