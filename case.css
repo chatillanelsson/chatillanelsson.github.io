@@ -297,7 +297,127 @@
   max-height: 520px;
 }
 
+.case-tag-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border: 1.5px solid rgba(26,21,18,0.15);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #444;
+  background: #fff;
+}
+
+.match-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.match-pill {
+  flex-shrink: 0;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(211, 87, 47, 0.1);
+  color: #d3572f;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.slide-viewer {
+  max-width: 900px;
+}
+
+.slide-viewer-frame {
+  border: 1px solid rgba(26,21,18,0.15);
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fdfbf7;
+}
+
+.slide-viewer-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.slide-viewer-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.4rem;
+  margin: 1.2rem 0;
+}
+
+.slide-nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  border: 1.5px solid rgba(26,21,18,0.15);
+  background: #fff;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.slide-nav-btn:hover {
+  border-color: #d3572f;
+  color: #d3572f;
+  transform: translateY(-1px);
+}
+
+.slide-counter {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #444;
+  min-width: 3rem;
+  text-align: center;
+}
+
+.slide-thumbs {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.7rem;
+}
+
+.slide-thumb {
+  padding: 0;
+  border: 1.5px solid rgba(26,21,18,0.12);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #fff;
+  transition: border-color 0.2s ease, opacity 0.2s ease;
+  opacity: 0.6;
+}
+
+.slide-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.slide-thumb:hover {
+  opacity: 0.85;
+}
+
+.slide-thumb.active {
+  border-color: #d3572f;
+  opacity: 1;
+}
+
 @media (max-width: 850px) {
+  .slide-thumbs {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   .case-hero {
     padding: 7rem 1.5rem 2rem;
   }

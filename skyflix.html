@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SkyFlix — Mashup av två API:er — Chatilla Nelsson</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="style.css" rel="stylesheet" />
+<link href="case.css" rel="stylesheet" />
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T22N5GX7');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T22N5GX7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  <nav class="top-nav">
+    <a href="index.html" class="nav-logo">← BACK TO PORTFOLIO</a>
+    <div class="nav-links">
+      <a href="index.html#about">ABOUT ME</a>
+      <a href="index.html#education">EDUCATION</a>
+      <a href="index.html#contact">CONTACT</a>
+    </div>
+  </nav>
+
+  <header class="case-hero">
+    <p class="section-num">API-MASHUP · PAPER PROTOTYPE</p>
+    <h1 class="case-hero-title">SkyFlix</h1>
+    <p class="case-hero-sub"><em>Vädret bestämmer vilken film som känns rätt ikväll.</em></p>
+    <p class="case-hero-body">Ett skolprojekt från Berghs Growth Marketing: en pappersprototyp som kombinerar väderdata med filmdata till en enda lösning. Idén, matchningslogiken och skisserna nedan är mitt eget arbete.</p>
+
+    <div class="cta-row" style="margin-top: 2rem;">
+      <span class="case-tag-pill">Open-Meteo — väderdata</span>
+      <span class="case-tag-pill">TMDB — filmdata</span>
+    </div>
+  </header>
+
+  <section class="section">
+    <p class="section-num">PROBLEM + LÖSNING</p>
+    <h2 class="section-title">Vädret säger något om<br>vad du är <em>sugen på att se.</em></h2>
+
+    <div class="info-cards-row">
+      <div class="info-card" style="text-align: left;">
+        <h3>Problemet</h3>
+        <p>Du ska se film ikväll men orkar inte scrolla runt i en kvart innan du bestämmer dig. Ingen tjänst tar hänsyn till att vädret utanför faktiskt påverkar vad man känner för.</p>
+      </div>
+      <div class="info-card" style="text-align: left;">
+        <h3>Lösningen</h3>
+        <p>SkyFlix hämtar vädret där du är och föreslår en film som matchar känslan — soligt ger lätt komedi, regn ger mysigt drama, åska ger spänning. En knapptryckning bort.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-num">DE TVÅ API:ERNA</p>
+    <h2 class="section-title">Väderdata möter <em>filmdata.</em></h2>
+    <p class="section-body">Två fristående API:er, matchade ihop av SkyFlix egen logik.</p>
+
+    <div class="info-cards-row">
+      <div class="info-card" style="text-align: left;">
+        <p class="resume-tag">GRATIS · INGEN NYCKEL</p>
+        <h3>Open-Meteo</h3>
+        <p>Aktuell temperatur · Molntäckning i procent · Nederbörd · Väderkod (klart, regn, åska, snö)</p>
+      </div>
+      <div class="info-card" style="text-align: left;">
+        <p class="resume-tag">GRATIS NYCKEL</p>
+        <h3>TMDB</h3>
+        <p>Filmer filtrerade på genre · Sorterat på popularitet/betyg · Posterbild · Titel och kort beskrivning</p>
+      </div>
+    </div>
+
+    <p class="section-num" style="margin-top: 3rem;">MATCHNINGSLOGIK</p>
+    <h2 class="section-title">Från väderdata<br>till <em>filmgenre.</em></h2>
+
+    <div class="sources-list">
+      <div class="source-row match-row"><span>☀️ Soligt och varmt</span><span class="match-pill">Komedi / Äventyr</span></div>
+      <div class="source-row match-row"><span>☁️ Mulet och svalt</span><span class="match-pill">Drama / Romantik</span></div>
+      <div class="source-row match-row"><span>🌧️ Regn</span><span class="match-pill">Drama / Familj</span></div>
+      <div class="source-row match-row"><span>⛈️ Åska / storm</span><span class="match-pill">Skräck / Thriller</span></div>
+      <div class="source-row match-row"><span>❄️ Snö</span><span class="match-pill">Animerat / Familj</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-num">PROTOTYPEN</p>
+    <h2 class="section-title">Sju skisser,<br>steg för <em>steg.</em></h2>
+    <p class="section-body">Hela presentationen som pappersprototyp — från problem till klickbart flöde. Bläddra igenom eller öppna originalfilen.</p>
+
+    <div class="cta-row" style="margin: 1.5rem 0 2.5rem;">
+      <a href="skyflix-assets/SkyFlix-API-mashup.pdf" target="_blank" rel="noopener noreferrer" class="cta-link">ÖPPNA HELA PRESENTATIONEN (PDF) ↗</a>
+    </div>
+
+    <div class="slide-viewer">
+      <div class="slide-viewer-frame">
+        <img id="slide-img" src="skyflix-assets/slide-01.webp" alt="SkyFlix pappersprototyp, bild 1 av 7">
+      </div>
+      <div class="slide-viewer-controls">
+        <button type="button" id="slide-prev" class="slide-nav-btn" aria-label="Föregående bild">←</button>
+        <span class="slide-counter"><span id="slide-current">1</span> / <span id="slide-total">7</span></span>
+        <button type="button" id="slide-next" class="slide-nav-btn" aria-label="Nästa bild">→</button>
+      </div>
+      <div class="slide-thumbs">
+        <button type="button" class="slide-thumb active" data-index="0"><img src="skyflix-assets/slide-01.webp" alt=""></button>
+        <button type="button" class="slide-thumb" data-index="1"><img src="skyflix-assets/slide-02.webp" alt=""></button>
+        <button type="button" class="slide-thumb" data-index="2"><img src="skyflix-assets/slide-03.webp" alt=""></button>
+        <button type="button" class="slide-thumb" data-index="3"><img src="skyflix-assets/slide-04.webp" alt=""></button>
+        <button type="button" class="slide-thumb" data-index="4"><img src="skyflix-assets/slide-05.webp" alt=""></button>
+        <button type="button" class="slide-thumb" data-index="5"><img src="skyflix-assets/slide-06.webp" alt=""></button>
+        <button type="button" class="slide-thumb" data-index="6"><img src="skyflix-assets/slide-07.webp" alt=""></button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>CHATILLA NELSSON PORTFOLIO © 2026</span>
+    <a href="index.html#education">← BACK TO EDUCATION</a>
+  </footer>
+
+  <script>
+    const slides = ['skyflix-assets/slide-01.webp','skyflix-assets/slide-02.webp','skyflix-assets/slide-03.webp','skyflix-assets/slide-04.webp','skyflix-assets/slide-05.webp','skyflix-assets/slide-06.webp','skyflix-assets/slide-07.webp'];
+    let current = 0;
+    const img = document.getElementById('slide-img');
+    const counter = document.getElementById('slide-current');
+    const thumbs = document.querySelectorAll('.slide-thumb');
+
+    function show(index) {
+      current = (index + slides.length) % slides.length;
+      img.src = slides[current];
+      img.alt = 'SkyFlix pappersprototyp, bild ' + (current + 1) + ' av ' + slides.length;
+      counter.textContent = current + 1;
+      thumbs.forEach((t, i) => t.classList.toggle('active', i === current));
+    }
+
+    document.getElementById('slide-prev').addEventListener('click', () => show(current - 1));
+    document.getElementById('slide-next').addEventListener('click', () => show(current + 1));
+    thumbs.forEach(t => t.addEventListener('click', () => show(Number(t.getAttribute('data-index')))));
+  </script>
+
+</body>
+</html>
