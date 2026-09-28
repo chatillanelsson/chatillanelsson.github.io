@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="1600" height="1120" font-family="Helvetica, Arial, sans-serif">
+  <rect width="800" height="560" fill="#ffffff"/>
+  <text x="40" y="52" font-size="26" font-weight="700" fill="#1a1512">Fler hundar, längre äktenskap. Men bara i två kommuner</text>
+  <text x="40" y="80" font-size="14" fill="#555">Hundar per 1 000 invånare och genomsnittlig längd på äktenskap som slutade i skilsmässa, elva kommuner</text>
+
+  <g transform="translate(80 110)">
+    <!-- rutnät: x 0–320 hundar -> 0–640 px (2 px/hund), y 0–20 år -> 360–0 px (18 px/år) -->
+    <g stroke="#e5e5e5">
+      <line x1="0" y1="0" x2="640" y2="0"/>
+      <line x1="0" y1="90" x2="640" y2="90"/>
+      <line x1="0" y1="180" x2="640" y2="180"/>
+      <line x1="0" y1="270" x2="640" y2="270"/>
+    </g>
+    <line x1="0" y1="360" x2="640" y2="360" stroke="#999"/>
+    <line x1="0" y1="0" x2="0" y2="360" stroke="#999"/>
+    <g font-size="12" fill="#555">
+      <text x="-10" y="364" text-anchor="end">0</text>
+      <text x="-10" y="274" text-anchor="end">5</text>
+      <text x="-10" y="184" text-anchor="end">10</text>
+      <text x="-10" y="94" text-anchor="end">15</text>
+      <text x="-10" y="4" text-anchor="end">20</text>
+      <text x="0" y="380" text-anchor="middle">0</text>
+      <text x="200" y="380" text-anchor="middle">100</text>
+      <text x="400" y="380" text-anchor="middle">200</text>
+      <text x="600" y="380" text-anchor="middle">300</text>
+    </g>
+    <text x="320" y="405" text-anchor="middle" font-size="13" fill="#1a1512">Hundar per 1 000 invånare</text>
+    <text transform="translate(-50 180) rotate(-90)" text-anchor="middle" font-size="13" fill="#1a1512">Äktenskapslängd (år)</text>
+
+    <!-- trendlinje: y = 8,944 + 0,02494x -->
+    <line x1="0" y1="199" x2="640" y2="55.3" stroke="#72000f" stroke-width="2" stroke-dasharray="7 5"/>
+
+    <g fill="#72000f">
+      <circle cx="84" cy="176.4" r="5"/>
+      <circle cx="88" cy="192.6" r="5"/>
+      <circle cx="92" cy="165.6" r="5"/>
+      <circle cx="94" cy="171" r="5"/>
+      <circle cx="100" cy="190.8" r="5"/>
+      <circle cx="102" cy="180" r="5"/>
+      <circle cx="110" cy="165.6" r="5"/>
+      <circle cx="110" cy="180" r="5"/>
+      <circle cx="114" cy="169.2" r="5"/>
+      <circle cx="596" cy="9" r="6"/>
+      <circle cx="604" cy="118.8" r="6"/>
+    </g>
+    <g font-size="13" font-weight="700" fill="#1a1512">
+      <text x="584" y="13" text-anchor="end">Vilhelmina 19,5 år</text>
+      <text x="592" y="123" text-anchor="end">Härjedalen 13,4 år</text>
+      <text x="80" y="218">Sundbyberg 9,3 år</text>
+    </g>
+    <text x="80" y="238" font-size="12" fill="#1a1512">Klungan: 9 storstadskommuner (9,3 till 10,8 år)</text>
+    <text x="340" y="300" font-size="12" fill="#555">r ≈ 0,86 med alla elva. r ≈ 0,28 utan Vilhelmina och Härjedalen.</text>
+  </g>
+
+  <text x="40" y="540" font-size="11" fill="#777">Källor: Konsumentguiden 2025 (Jordbruksverket, SCB). Länsförsäkringar/MåBra 2024 (SCB, snitt 2000 till 2023). Analys och grafik: Chatilla Nelsson.</text>
+</svg>

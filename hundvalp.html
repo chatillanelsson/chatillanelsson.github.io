@@ -3,12 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Skilsmässa eller hundvalp? — Chatilla Nelsson</title>
+<title>Skilsmässa eller hundvalp? | Chatilla Nelsson</title>
+<meta name="description" content="Data story, pressmaterial och innehållsplan om hundtäthet och äktenskapslängd i elva svenska kommuner, och varför sambandet inte betyder att hundar räddar äktenskap.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link href="style.css" rel="stylesheet" />
 <link href="case.css" rel="stylesheet" />
+<link href="hundvalp.css" rel="stylesheet" />
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -23,23 +25,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
+  <div class="read-progress" aria-hidden="true"></div>
+
   <nav class="top-nav">
     <a href="index.html" class="nav-logo">← BACK TO PORTFOLIO</a>
     <div class="nav-links">
-      <a href="index.html#about">ABOUT ME</a>
-      <a href="index.html#education">PORTFOLIO</a>
-      <a href="index.html#contact">CONTACT</a>
+      <a href="#story">STORYN</a>
+      <a href="#press">FÖR JOURNALISTER</a>
+      <a href="#plan">INNEHÅLLSPLAN</a>
     </div>
   </nav>
 
-  <header class="case-hero slide slide--red">
+  <!-- ====================================================== -->
+  <!-- DEL 1: STORYN                                          -->
+  <!-- ====================================================== -->
+
+  <header class="case-hero slide slide--red" id="story">
     <span class="ghost" aria-hidden="true">HUND</span>
     <span class="mark" aria-hidden="true">CN</span>
 
     <p class="section-num">DATA STORY</p>
     <h1 class="case-hero-title">Skilsmässa eller<br>hundvalp?</h1>
-    <p class="case-hero-sub"><em>I dessa svenska kommuner håller kärleken nästan dubbelt så länge</em></p>
-    <p class="case-hero-body">Vi jämförde hundtäthet och äktenskapslängd i elva svenska kommuner. Sambandet var starkare än vi trodde — men förklaringen är inte den du tror.</p>
+    <p class="case-hero-sub"><em>I den här kommunen håller kärleken dubbelt så länge</em></p>
+    <p class="case-hero-body">Vi jämförde hundtäthet och äktenskapslängd i elva svenska kommuner. Sambandet var starkare än vi trodde. Men förklaringen är inte den du tror.</p>
+
+    <div class="byline">
+      <span>Av Chatilla Nelsson</span>
+      <span>Publicerad 28 september 2026</span>
+      <span>Lästid ca 4 min</span>
+    </div>
+
+    <div>
+      <a href="#press" class="press-jump">JOURNALIST? HOPPA TILL PRESSMATERIALET →</a>
+    </div>
 
     <div class="icon-row">
       <div class="icon-item">
@@ -57,11 +75,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </header>
 
+  <!-- HOOK: QUIZ -->
   <section class="section slide slide--pink">
-    <h2 class="section-title">Ju fler hundar i kommunen,<br>desto längre håller <em>äktenskapen.</em></h2>
+    <div class="quiz reveal">
+      <p class="section-num">INNAN VI BÖRJAR, GISSA!</p>
+      <p class="quiz-q">I Vilhelmina finns 298 hundar per 1 000 invånare. Hur länge varar ett äktenskap där i snitt innan det slutar i skilsmässa?</p>
+      <div class="quiz-options" role="group" aria-label="Svarsalternativ">
+        <button class="quiz-btn" data-answer="wrong">9,3 år</button>
+        <button class="quiz-btn" data-answer="wrong">14 år</button>
+        <button class="quiz-btn" data-answer="right">19,5 år</button>
+      </div>
+      <p class="quiz-answer" aria-live="polite">
+        <strong>Rätt svar: 19,5 år.</strong> Det är mer än dubbelt så länge som i Sundbyberg (9,3 år), där det finns nästan sju gånger färre hundar per invånare. Betyder det att hundar räddar äktenskap? Scrolla vidare.
+      </p>
+    </div>
+  </section>
 
-    <div class="chart-wrap">
-      <svg viewBox="0 0 640 400" class="chart-svg">
+  <section class="section slide slide--pink" style="padding-top: 2rem;">
+    <h2 class="section-title reveal">Ju fler hundar i kommunen,<br>desto längre håller <em>äktenskapen.</em></h2>
+
+    <div class="chart-wrap reveal" id="chart">
+      <svg viewBox="0 0 640 400" class="chart-svg" role="img" aria-labelledby="chart-title chart-desc">
+        <title id="chart-title">Hundtäthet mot äktenskapslängd i elva kommuner</title>
+        <desc id="chart-desc">Spridningsdiagram över elva kommuner. Nio storstadskommuner ligger samlade kring 42 till 57 hundar per 1 000 invånare och 9,3 till 10,8 års äktenskapslängd. Två glesbygdskommuner sticker ut: Vilhelmina med 298 hundar och 19,5 år, och Härjedalen med 302 hundar och 13,4 år.</desc>
+        <defs>
+          <clipPath id="trend-clip"><rect id="trend-clip-rect" x="60" y="0" width="0" height="400"/></clipPath>
+        </defs>
         <line x1="60" y1="360" x2="620" y2="360" stroke="#72000f" stroke-opacity="0.2"/>
         <line x1="60" y1="20" x2="60" y2="360" stroke="#72000f" stroke-opacity="0.2"/>
         <g stroke="#72000f" stroke-opacity="0.08">
@@ -81,62 +120,99 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <text x="410" y="378" text-anchor="middle">200</text>
           <text x="585" y="378" text-anchor="middle">300</text>
         </g>
-        <line x1="60" y1="207" x2="620" y2="71" stroke="#72000f" stroke-width="3" stroke-dasharray="8 6"/>
+        <line x1="60" y1="208" x2="620" y2="72" stroke="#72000f" stroke-width="3" stroke-dasharray="8 6" clip-path="url(#trend-clip)"/>
         <g fill="#72000f">
-          <circle cx="137" cy="202" r="5"/>
-          <circle cx="144" cy="183" r="5"/>
-          <circle cx="148" cy="180" r="5"/>
-          <circle cx="151" cy="178" r="5"/>
-          <circle cx="156" cy="182" r="5"/>
-          <circle cx="141" cy="190" r="5"/>
-          <circle cx="146" cy="193" r="5"/>
-          <circle cx="582" cy="29" r="6"/>
-          <circle cx="585" cy="132" r="6"/>
+          <circle class="dot dot--named" style="--i:0" cx="133.5" cy="186.6" r="5"><title>Solna: 42 hundar per 1 000 inv, 10,2 år</title></circle>
+          <circle class="dot dot--named" style="--i:1" cx="137" cy="201.9" r="5"><title>Sundbyberg: 44 hundar per 1 000 inv, 9,3 år</title></circle>
+          <circle class="dot dot--named" style="--i:2" cx="140.5" cy="176.4" r="5"><title>Järfälla: 46 hundar per 1 000 inv, 10,8 år</title></circle>
+          <circle class="dot dot--named" style="--i:3" cx="142.3" cy="181.5" r="5"><title>Göteborg: 47 hundar per 1 000 inv, 10,5 år</title></circle>
+          <circle class="dot dot--named" style="--i:4" cx="147.5" cy="200.2" r="5"><title>Botkyrka: 50 hundar per 1 000 inv, 9,4 år</title></circle>
+          <circle class="dot dot--named" style="--i:5" cx="149.3" cy="190" r="5"><title>Stockholm: 51 hundar per 1 000 inv, 10,0 år</title></circle>
+          <circle class="dot dot--named" style="--i:6" cx="156.3" cy="176.4" r="5"><title>Södertälje: 55 hundar per 1 000 inv, 10,8 år</title></circle>
+          <circle class="dot dot--named" style="--i:7" cx="156.3" cy="190" r="5"><title>Malmö: 55 hundar per 1 000 inv, 10,0 år</title></circle>
+          <circle class="dot dot--named" style="--i:8" cx="159.8" cy="179.8" r="5"><title>Upplands Väsby: 57 hundar per 1 000 inv, 10,6 år</title></circle>
+          <circle class="dot dot--named" style="--i:9" cx="581.5" cy="28.5" r="6"><title>Vilhelmina: 298 hundar per 1 000 inv, 19,5 år</title></circle>
+          <circle class="dot dot--named" style="--i:10" cx="588.5" cy="132.2" r="6"><title>Härjedalen: 302 hundar per 1 000 inv, 13,4 år</title></circle>
         </g>
         <g font-family="Anton, sans-serif" font-size="15" fill="#72000f">
-          <text x="130" y="222">Sundbyberg</text>
-          <text x="592" y="24">Vilhelmina</text>
-          <text x="595" y="128">Härjedalen</text>
+          <text class="chart-label" x="120" y="224">Sundbyberg</text>
+          <text class="chart-label" x="570" y="22" text-anchor="end">Vilhelmina</text>
+          <text class="chart-label" x="575" y="137" text-anchor="end">Härjedalen</text>
+        </g>
+        <g class="chart-label" font-family="Inter, sans-serif" font-size="11" fill="#72000f">
+          <text x="120" y="242">Klungan: 9 storstadskommuner</text>
         </g>
         <text x="340" y="395" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#72000f">Hundar per 1 000 invånare</text>
         <text x="-190" y="18" transform="rotate(-90)" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#72000f">Äktenskapslängd (år)</text>
       </svg>
-      <p class="chart-caption">Hundar per 1 000 invånare (x) mot genomsnittlig äktenskapslängd i år (y). Varje punkt är en kommun. Källor: Jordbruksverket, SCB/MåBra.</p>
+      <p class="chart-caption">Hundar per 1 000 invånare (x) mot genomsnittlig äktenskapslängd i år (y). Varje punkt är en kommun. Håll muspekaren över en punkt för att se vilken. Källor: Konsumentguiden 2025 (Jordbruksverket, SCB) och Länsförsäkringar/MåBra 2024 (SCB, snitt 2000 till 2023).</p>
     </div>
 
-    <div class="stat-trio">
+    <div class="stat-trio reveal">
       <div class="stat-item">
         <p class="resume-tag">KORRELATION</p>
-        <p class="stat-value">r ≈ 0,87</p>
-        <p class="stat-sub">r² ≈ 0,75 — mycket starkt samband i urvalet</p>
+        <p class="stat-value">r ≈ <span data-count="0.86" data-decimals="2">0,86</span></p>
+        <p class="stat-sub">r² ≈ 0,75, ett mycket starkt samband i urvalet</p>
       </div>
       <div class="stat-item">
         <p class="resume-tag">VILHELMINA</p>
-        <p class="stat-value">19,5 år</p>
+        <p class="stat-value"><span data-count="19.5" data-decimals="1">19,5</span> år</p>
         <p class="stat-sub">298 hundar per 1 000 invånare</p>
       </div>
       <div class="stat-item">
         <p class="resume-tag">SUNDBYBERG</p>
-        <p class="stat-value">9,3 år</p>
+        <p class="stat-value"><span data-count="9.3" data-decimals="1">9,3</span> år</p>
         <p class="stat-sub">44 hundar per 1 000 invånare</p>
       </div>
     </div>
 
-    <p class="note-box"><strong>Viktigt att veta:</strong> siffrorna bygger på elva kommuner som fanns representerade i både Jordbruksverkets hundregister och SCB:s statistik via MåBra — inte samtliga 290. "Äktenskapslängd" avser hur länge de äktenskap som avslutats i skilsmässa i snitt varade, inte hur stor andel av äktenskapen som håller.</p>
+    <p class="note-box reveal"><strong>Viktigt att veta:</strong> de elva kommunerna är de som finns med på båda topplistorna, alltså bland kommunerna med flest eller färst hundar och samtidigt bland dem med längst eller kortast äktenskap. Det är inte ett slumpmässigt urval av Sveriges 290 kommuner. "Äktenskapslängd" avser hur länge äktenskap som slutat i skilsmässa i snitt varade under åren 2000 till 2023, inte hur stor andel av äktenskapen som håller. Rikssnittet är 11,6 år och cirka 100 hundar per 1 000 invånare.</p>
   </section>
 
+  <!-- TVÅ KOMMUNER BÄR SAMBANDET -->
+  <section class="section slide slide--pink" style="padding-top: 2rem;">
+    <p class="section-num reveal">MEN TITTA NOGA</p>
+    <h2 class="section-title reveal">Två kommuner bär<br><em>hela sambandet</em></h2>
+    <p class="section-body reveal" style="text-align:left">
+      Nio av de elva kommunerna är storstadskommuner med mellan 42 och 57 hundar per 1 000 invånare. Där varar äktenskapen mellan 9,3 och 10,8 år, och fler hundar ger inte längre äktenskap. Upplands Väsby har flest hundar i gruppen (57) men kortare äktenskap än Järfälla, som har nästan färst (46). Det starka sambandet uppstår först när Vilhelmina och Härjedalen kommer med.
+    </p>
+
+    <div class="compare-duo reveal">
+      <div class="compare-item">
+        <p class="resume-tag">ALLA ELVA KOMMUNER</p>
+        <p class="stat-value">r ≈ <span data-count="0.86" data-decimals="2">0,86</span></p>
+        <p class="stat-sub">Mycket starkt samband</p>
+      </div>
+      <div class="compare-arrow" aria-hidden="true">→</div>
+      <div class="compare-item">
+        <p class="resume-tag">UTAN VILHELMINA &amp; HÄRJEDALEN</p>
+        <p class="stat-value">r ≈ <span data-count="0.28" data-decimals="2">0,28</span></p>
+        <p class="stat-sub">Svagt samband</p>
+      </div>
+    </div>
+
+    <p class="note-box reveal"><strong>Och en ledtråd till:</strong> Härjedalen har flest hundar av alla, 302 per 1 000 invånare. Ändå varar äktenskapen där 13,4 år, sex år kortare än i Vilhelmina. Om hundarna var förklaringen borde Härjedalen ligga högst.</p>
+  </section>
+
+  <div class="ticker-wrap ticker-wrap--red" aria-hidden="true">
+    <div class="ticker">
+      <span>SAMBAND ≠ ORSAK ✦ SAMBAND ≠ ORSAK ✦ SAMBAND ≠ ORSAK ✦ SAMBAND ≠ ORSAK ✦ SAMBAND ≠ ORSAK ✦ SAMBAND ≠ ORSAK ✦ </span>
+      <span>SAMBAND ≠ ORSAK ✦ SAMBAND ≠ ORSAK ✦ SAMBAND ≠ ORSAK ✦ SAMBAND ≠ ORSAK ✦ SAMBAND ≠ ORSAK ✦ SAMBAND ≠ ORSAK ✦ </span>
+    </div>
+  </div>
+
   <section class="section slide slide--red">
-    <h2 class="section-title">Det är förmodligen inte hundarna.<br>Det är <em>var du bor.</em></h2>
-    <p class="section-body">
-      Innan någon börjar skaffa hund för relationens skull: sambandet ovan är med största sannolikhet inte orsak och verkan. Det som faktiskt styr är en betydligt mer väntad faktor — stad kontra glesbygd — som råkar påverka både hundhållning och äktenskapsmönster samtidigt, utan att de två har något direkt med varandra att göra.
+    <h2 class="section-title reveal">Det är förmodligen inte hundarna.<br>Det är <em>var du bor.</em></h2>
+    <p class="section-body reveal">
+      Innan någon börjar skaffa hund för relationens skull: sambandet ovan är med största sannolikhet inte orsak och verkan. Det som faktiskt styr är en betydligt mer väntad faktor, stad kontra glesbygd, som råkar påverka både hundhållning och äktenskapsmönster samtidigt. De två har alltså inget direkt med varandra att göra.
     </p>
-    <p class="section-body" style="margin-top: 1.5rem;">
-      Det finns dessutom en faktor till som sällan nämns i den här typen av jämförelser, men som borde: ålder. Glesbygdskommuner har generellt en äldre befolkning, och äldre årskullar har haft mer tid på sig att antingen skiljas sent eller stanna länge i sina äktenskap — vilket i sig drar upp genomsnittet oavsett hundinnehav.
+    <p class="section-body reveal" style="margin-top: 1.5rem;">
+      Det finns dessutom en faktor till som sällan nämns i den här typen av jämförelser, men som borde: ålder. Glesbygdskommuner har generellt en äldre befolkning, och äldre årskullar har haft mer tid på sig att antingen skiljas sent eller stanna länge i sina äktenskap. Det drar i sig upp genomsnittet, oavsett hundinnehav.
     </p>
 
-    <blockquote class="pull-quote">»Det här är inte en svaghet i granskningen — det är den mest intressanta delen av den.«</blockquote>
+    <blockquote class="pull-quote reveal">»Hunden är inte orsaken. Den är ett <em>vittne</em> till hur vi bor.«</blockquote>
 
-    <div class="info-cards-row">
+    <div class="info-cards-row reveal">
       <div class="info-card">
         <div class="info-card-icons">
           <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><circle cx="14" cy="10" r="6"/><line x1="14" y1="16" x2="14" y2="26"/></svg>
@@ -150,29 +226,504 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2"><rect x="12" y="8" width="16" height="24" rx="1"/><line x1="16" y1="13" x2="18" y2="13"/><line x1="22" y1="13" x2="24" y2="13"/><line x1="16" y1="19" x2="18" y2="19"/><line x1="22" y1="19" x2="24" y2="19"/></svg>
         </div>
         <h3>Storstad</h3>
-        <p>Trångboddhet gör hundhållning svårare — skilsmässofrekvensen historiskt högre.</p>
+        <p>Trångboddhet gör hundhållning svårare. Skilsmässofrekvensen är historiskt högre.</p>
       </div>
     </div>
   </section>
 
+  <!-- METOD -->
   <section class="section slide slide--pink">
-    <h2 class="section-title">Var ligger <em>din</em> kommun?</h2>
-    <p class="section-body">
-      Oavsett förklaring är frågan i sig lätt att relatera till: var i Sverige håller kärleken längst, och varför? Det är den typen av "det handlar om mig och min ort"-nyfikenhet som gör den här typen av analys delbar snarare än bara läsbar.
+    <p class="section-num reveal">METOD</p>
+    <h2 class="section-title reveal">Så tog vi <em>fram</em> siffrorna</h2>
+    <ol class="method-steps reveal">
+      <li><strong>Hundar</strong>Hundar per 1 000 invånare 2025, sammanställt av Konsumentguiden ur Jordbruksverkets hundregister och SCB:s befolkningsstatistik.</li>
+      <li><strong>Äktenskap</strong>Genomsnittlig äktenskapslängd per kommun för åren 2000 till 2023. SCB-data, sammanställd av Länsförsäkringar och publicerad av MåBra.</li>
+      <li><strong>Matchning</strong>Kommuner som fanns på båda källornas topplistor togs med. Det gav elva kommuner.</li>
+      <li><strong>Beräkning</strong>Hundar per 1 000 invånare jämfördes med äktenskapslängd. Pearsons korrelationskoefficient räknades ut i Google Sheets: r ≈ 0,86.</li>
+      <li><strong>Kontroll</strong>Samma beräkning utan de två glesbygdskommunerna gav r ≈ 0,28. Stad eller glesbygd, och ålder, granskades som störfaktorer.</li>
+    </ol>
+  </section>
+
+  <!-- DIN KOMMUN -->
+  <section class="section slide slide--pink" style="padding-top: 2rem;">
+    <h2 class="section-title reveal">Var ligger <em>din</em> kommun?</h2>
+    <p class="section-body reveal">
+      Här är alla elva kommuner i urvalet, sorterade efter hur länge äktenskapen i snitt varade innan skilsmässan. Hittar du din ort, eller någon du känner?
     </p>
 
-    <div class="sources-list">
+    <div class="muni-list reveal" id="muni-list">
+      <div class="muni-head"><span>Kommun</span><span>Äktenskapslängd</span><span>År</span></div>
+      <div class="muni-row"><span class="muni-name">Vilhelmina<small>298 hundar per 1&nbsp;000&nbsp;inv</small></span><span class="muni-bar"><span style="--w: 97.5%"></span></span><span class="muni-val">19,5</span></div>
+      <div class="muni-row"><span class="muni-name">Härjedalen<small>302 hundar per 1&nbsp;000&nbsp;inv</small></span><span class="muni-bar"><span style="--w: 67%"></span></span><span class="muni-val">13,4</span></div>
+      <div class="muni-row"><span class="muni-name">Järfälla<small>46 hundar per 1&nbsp;000&nbsp;inv</small></span><span class="muni-bar"><span style="--w: 54%"></span></span><span class="muni-val">10,8</span></div>
+      <div class="muni-row"><span class="muni-name">Södertälje<small>55 hundar per 1&nbsp;000&nbsp;inv</small></span><span class="muni-bar"><span style="--w: 54%"></span></span><span class="muni-val">10,8</span></div>
+      <div class="muni-row"><span class="muni-name">Upplands Väsby<small>57 hundar per 1&nbsp;000&nbsp;inv</small></span><span class="muni-bar"><span style="--w: 53%"></span></span><span class="muni-val">10,6</span></div>
+      <div class="muni-row"><span class="muni-name">Göteborg<small>47 hundar per 1&nbsp;000&nbsp;inv</small></span><span class="muni-bar"><span style="--w: 52.5%"></span></span><span class="muni-val">10,5</span></div>
+      <div class="muni-row"><span class="muni-name">Solna<small>42 hundar per 1&nbsp;000&nbsp;inv</small></span><span class="muni-bar"><span style="--w: 51%"></span></span><span class="muni-val">10,2</span></div>
+      <div class="muni-row"><span class="muni-name">Stockholm<small>51 hundar per 1&nbsp;000&nbsp;inv</small></span><span class="muni-bar"><span style="--w: 50%"></span></span><span class="muni-val">10,0</span></div>
+      <div class="muni-row"><span class="muni-name">Malmö<small>55 hundar per 1&nbsp;000&nbsp;inv</small></span><span class="muni-bar"><span style="--w: 50%"></span></span><span class="muni-val">10,0</span></div>
+      <div class="muni-row"><span class="muni-name">Botkyrka<small>50 hundar per 1&nbsp;000&nbsp;inv</small></span><span class="muni-bar"><span style="--w: 47%"></span></span><span class="muni-val">9,4</span></div>
+      <div class="muni-row"><span class="muni-name">Sundbyberg<small>44 hundar per 1&nbsp;000&nbsp;inv</small></span><span class="muni-bar"><span style="--w: 46.5%"></span></span><span class="muni-val">9,3</span></div>
+    </div>
+
+    <button class="share-btn" id="share-btn">SKICKA TILL NÅGON DU DELAR SOFFA MED →</button>
+    <span class="share-msg" id="share-msg" aria-live="polite">Länken är kopierad!</span>
+
+    <div class="sources-list reveal">
       <p class="resume-tag" style="margin-bottom: 1rem;">KÄLLOR</p>
-      <div class="source-row">Jordbruksverket — Statistik ur hundregistret</div>
-      <div class="source-row">MåBra — "Här varar äktenskapen längst respektive kortast" (baserat på SCB-data)</div>
-      <div class="source-row">SCB Statistikdatabasen — Giftemål och skilsmässor per region</div>
+      <a class="source-row" href="https://www.konsumentguiden.se/ekonomi/forsakringar/hundforsakring/sveriges-mest-och-minst-hundalskande-kommuner-2025/" target="_blank" rel="noopener noreferrer">Konsumentguiden: Sveriges mest och minst hundälskande kommuner 2025 (data från Jordbruksverkets hundregister och SCB) ↗</a>
+      <a class="source-row" href="https://www.tv4.se/artikel/5eAat9fX21uHZXc47cSELT/haer-aer-sveriges-mest-och-minst-hundaelskande-kommun" target="_blank" rel="noopener noreferrer">TV4 Nyheterna: Här är Sveriges mest och minst hundälskande kommun, 8 mars 2026 ↗</a>
+      <a class="source-row" href="https://www.mabra.com/relationer/topp-30-har-varar-aktenskapet-langst-respektive-kortast/10501284" target="_blank" rel="noopener noreferrer">MåBra: Topp 30: Här varar äktenskapet kortast respektive längst, 6 november 2024 ↗</a>
+      <a class="source-row" href="https://news.cision.com/se/lansforsakringar/r/sa-lange-varar-ett-aktenskap-i-din-kommun,c4039118" target="_blank" rel="noopener noreferrer">Länsförsäkringar: Så länge varar ett äktenskap i din kommun, 1 oktober 2024 (SCB-data, snitt 2000 till 2023) ↗</a>
     </div>
   </section>
+
+  <!-- ====================================================== -->
+  <!-- DEL 2: FÖR JOURNALISTER                                -->
+  <!-- ====================================================== -->
+
+  <section class="section slide slide--red" id="press">
+    <span class="ghost ghost--low" aria-hidden="true">PRESS</span>
+
+    <p class="section-num reveal">FÖR JOURNALISTER &amp; REDAKTIONER</p>
+    <h2 class="section-title reveal">En story som är<br><em>klar att plocka upp</em></h2>
+    <p class="section-body reveal" style="text-align:left; margin-bottom: 2.5rem;">
+      Här finns allt du behöver för en egen artikel, ett inslag eller ett lokalt nedslag: nyhetsvärdet, färdiga vinklar, fakta som går att citera, data och grafik. Fritt att använda med källhänvisning.
+    </p>
+
+    <p class="sub-label reveal">Därför är det en nyhet</p>
+    <div class="news-grid reveal">
+      <div class="news-card"><p class="resume-tag">01</p><h3>Överraskning</h3><p>Hundar och hållbara äktenskap. Ett oväntat samband som får folk att stanna upp.</p></div>
+      <div class="news-card"><p class="resume-tag">02</p><h3>Närhet</h3><p>Varje kommun har sin egen siffra. Läsaren kan jämföra sin ort med grannens.</p></div>
+      <div class="news-card"><p class="resume-tag">03</p><h3>Aktualitet</h3><p>Passar Alla hjärtans dag, SCB:s statistiksläpp och valpsäsongen.</p></div>
+      <div class="news-card"><p class="resume-tag">04</p><h3>Igenkänning</h3><p>Många lever i en relation och många har hund. Ämnet angår en stor publik.</p></div>
+      <div class="news-card"><p class="resume-tag">05</p><h3>Folkbildning</h3><p>En konkret och rolig väg in i skillnaden mellan samband och orsak.</p></div>
+    </div>
+
+    <div class="press-grid reveal">
+      <div>
+        <p class="sub-label">Pitchen, färdig att skicka</p>
+        <div class="pitch-mail">
+          <div class="pitch-head">
+            <span>E-POST TILL REDAKTIONEN</span>
+            <button class="copy-btn" id="copy-pitch">KOPIERA TEXTEN</button>
+          </div>
+          <div class="pitch-body" id="pitch-text">
+            <p class="pitch-subject">Ämne: I Vilhelmina håller äktenskapen dubbelt så länge som i Sundbyberg. Och det har (nästan) med hundar att göra</p>
+            <p>Hej!</p>
+            <p>I Vilhelmina finns 298 hundar per 1 000 invånare, ungefär sex gånger fler än i storstäderna. Där varar äktenskapen som slutar i skilsmässa i snitt 19,5 år. I Sundbyberg, med 44 hundar per 1 000 invånare, varar de 9,3 år.</p>
+            <p>Över elva kommuner är sambandet mellan hundar och äktenskapslängd mycket starkt (r ≈ 0,86). Men hundarna är inte förklaringen. Tar man bort de två glesbygdskommunerna Vilhelmina och Härjedalen blir sambandet svagt (r ≈ 0,28). Och Härjedalen, som har flest hundar av alla, har kortare äktenskap än Vilhelmina. Den troliga förklaringen är bostadsort och ålder. Det gör storyn till en ovanligt rolig ingång till att förklara varför samband inte är samma sak som orsak.</p>
+            <p>Jag har siffror för elva kommuner, färdig grafik och metodbeskrivning, och ställer gärna upp på en intervju. Allt finns här: <a href="https://chatillanelsson.github.io/hundvalp.html#press" style="color:inherit">chatillanelsson.github.io/hundvalp.html</a></p>
+            <p>Vänliga hälsningar,<br>Chatilla Nelsson<br>Growth Marketing, Berghs School of Communication<br><a href="mailto:chatillanelsson@icloud.com" style="color:inherit">chatillanelsson@icloud.com</a><br><a href="https://www.linkedin.com/in/chatilla-nelsson-10995533a/" target="_blank" rel="noopener noreferrer" style="color:inherit">linkedin.com/in/chatilla-nelsson-10995533a</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <p class="sub-label">Fakta i korthet</p>
+        <ul class="facts">
+          <li><b>1</b><span>Vilhelmina: 298 hundar per 1 000 invånare. Äktenskap som slutar i skilsmässa varar i snitt 19,5 år.</span></li>
+          <li><b>2</b><span>Sundbyberg: 44 hundar per 1 000 invånare, 9,3 år.</span></li>
+          <li><b>3</b><span>Härjedalen har flest hundar, 302 per 1 000 invånare, men kortare äktenskap än Vilhelmina: 13,4 år.</span></li>
+          <li><b>4</b><span>Korrelation, alla elva kommuner: r ≈ 0,86. Utan Vilhelmina och Härjedalen: r ≈ 0,28.</span></li>
+          <li><b>5</b><span>I de nio storstadskommunerna varar äktenskapen mellan 9,3 och 10,8 år.</span></li>
+          <li><b>6</b><span>Trolig förklaring: stad eller glesbygd, och ålder. Inte hundarna.</span></li>
+        </ul>
+        <p class="facts-note">Källor: Konsumentguiden 2025 (Jordbruksverkets hundregister och SCB), Länsförsäkringar och MåBra 2024 (SCB, snitt 2000 till 2023). Rikssnitt: 11,6 år och cirka 100 hundar per 1 000 invånare. Ange ”Analys: Chatilla Nelsson” vid publicering.</p>
+      </div>
+    </div>
+
+    <p class="sub-label reveal" style="margin-top: 4rem;">Färdiga vinklar</p>
+    <div class="angle-list reveal">
+      <div class="angle">
+        <p class="resume-tag">RIKS / LIVSSTIL</p>
+        <h4>”Nej, en hund räddar inte ditt äktenskap”</h4>
+        <p>Mytkrossare till Alla hjärtans dag. Sambandet är kroken, förklaringen är poängen.</p>
+      </div>
+      <div class="angle">
+        <p class="resume-tag">LOKAL / GLESBYGD</p>
+        <h4>”Här håller kärleken längst i Sverige”</h4>
+        <p>Porträtt av orten: vad är det med livet i Vilhelmina? Intervju med ett par som varit gifta länge.</p>
+      </div>
+      <div class="angle">
+        <p class="resume-tag">LOKAL / STORSTAD</p>
+        <h4>”Därför skiljer sig Sundbybergsborna snabbare”</h4>
+        <p>Trångboddhet, ung befolkning och tempo. Vad säger siffrorna om livet i storstan?</p>
+      </div>
+      <div class="angle">
+        <p class="resume-tag">VETENSKAP / FOLKBILDNING</p>
+        <h4>”Så lurar statistiken dig”</h4>
+        <p>Hundar och äktenskap som skolexempel på störfaktorer, med förklarande grafik.</p>
+      </div>
+    </div>
+
+    <p class="sub-label reveal" style="margin-top: 4rem;">Förslag på intervjupersoner</p>
+    <div class="angle-list reveal">
+      <div class="angle"><p class="resume-tag">EXPERT</p><h4>Demograf eller befolkningsforskare</h4><p>Kan förklara varför ålder och bostadsort påverkar skilsmässostatistiken.</p></div>
+      <div class="angle"><p class="resume-tag">EXPERT</p><h4>Parterapeut</h4><p>Kan svara på om gemensamma projekt, som en hund, påverkar en relation. MåBra intervjuade parterapeuten Nathalie Siljerud Joo om samma siffror.</p></div>
+      <div class="angle"><p class="resume-tag">EXPERT</p><h4>Privatekonom</h4><p>Länsförsäkringars privatekonom Stefan Westerberg tog fram äktenskapssiffrorna och kan tala om ekonomin kring skilsmässor.</p></div>
+      <div class="angle"><p class="resume-tag">CASE</p><h4>Hundägande par i Vilhelmina</h4><p>Ger storyn ansikte och lokal förankring.</p></div>
+      <div class="angle"><p class="resume-tag">ANALYSEN</p><h4>Chatilla Nelsson</h4><p>Berättar om metoden, fynden och vad siffrorna inte säger.</p></div>
+    </div>
+
+    <p class="sub-label reveal" style="margin-top: 4rem;">Pressmaterial</p>
+    <div class="press-kit reveal">
+      <a class="kit-item" href="hundvalp-diagram.png" download><span class="kit-icon">PNG</span><span><strong>Diagram &amp; grafik</strong><span>1600 × 1120 px, fritt att använda</span></span></a>
+      <a class="kit-item" href="hundvalp-diagram.svg" download><span class="kit-icon">SVG</span><span><strong>Diagram, skalbart</strong><span>För tryck och redigering</span></span></a>
+      <a class="kit-item" href="hundvalp-data.csv" download><span class="kit-icon">CSV</span><span><strong>Data för alla elva kommuner</strong><span>Hundar per 1 000 inv och äktenskapslängd</span></span></a>
+      <a class="kit-item" href="hundvalp-metod.pdf" target="_blank" rel="noopener"><span class="kit-icon">PDF</span><span><strong>Metodbeskrivning</strong><span>Källor, urval och beräkning</span></span></a>
+    </div>
+
+    <div class="contact-strip reveal">
+      <p>Vill du ha lokala siffror eller en intervju?<small>Svar samma dag. Siffror för din kommun tas fram på begäran.</small></p>
+      <a href="mailto:chatillanelsson@icloud.com?subject=Skilsm%C3%A4ssa%20eller%20hundvalp%3F" id="press-contact">MEJLA MIG →</a>
+    </div>
+  </section>
+
+  <!-- ====================================================== -->
+  <!-- DEL 3: INNEHÅLLSPLANEN                                 -->
+  <!-- ====================================================== -->
+
+  <section class="section slide slide--pink" id="plan">
+    <p class="section-num reveal">BAKOM STORYN</p>
+    <h2 class="section-title reveal">Innehålls&shy;planen<br>i <em>tolv</em> delar</h2>
+
+    <div class="plan-intro-row reveal">
+      <p class="section-body" style="text-align:left">
+        Storyn är innehållet. Planen är allt runt omkring: varför den görs, för vem, hur den når redaktionerna, när den publiceras och hur vi vet om den lyckades. Klicka på en rad för att öppna den.
+      </p>
+      <button class="plan-toggle-all" id="plan-toggle-all">ÖPPNA ALLA +</button>
+    </div>
+
+    <div class="plan-list reveal">
+
+      <details class="plan-item">
+        <summary><span class="plan-num">01</span><span class="plan-title">Syfte &amp; mål</span><span class="plan-hint">Varför gör vi det här?</span><span class="plan-plus">+</span></summary>
+        <div class="plan-body">
+          <p class="plan-big">Få redaktioner att plocka upp storyn, och lära publiken skilja på samband och orsak.</p>
+          <h4>Mätbara mål (SMART)</h4>
+          <ul>
+            <li><strong>3 publiceringar i media</strong> (minst 1 riks och 2 lokala) inom 14 dagar från utskick</li>
+            <li><strong>25 % svarsfrekvens</strong> på pitchen</li>
+            <li><strong>2 000 sidvisningar</strong> inom 14 dagar från publicering</li>
+            <li><strong>25 % av besökarna</strong> svarar på quizet</li>
+          </ul>
+          <p class="plan-note">Målsiffrorna är förslag. Justera dem efter tidigare resultat.</p>
+        </div>
+      </details>
+
+      <details class="plan-item">
+        <summary><span class="plan-num">02</span><span class="plan-title">Målgrupp</span><span class="plan-hint">Vem skriver vi för?</span><span class="plan-plus">+</span></summary>
+        <div class="plan-body">
+          <div class="card-grid">
+            <div class="mini-card">
+              <p class="resume-tag">PRIMÄR: MOTTAGARE</p>
+              <h5>Journalister &amp; redaktörer</h5>
+              <p>Livsstils-, nyhets- och lokalredaktioner. De har ont om tid och får många pitchar. De vill ha ett tydligt nyhetsvärde, pålitliga siffror, en lokal vinkel och någon att intervjua.</p>
+            </div>
+            <div class="mini-card">
+              <p class="resume-tag">SEKUNDÄR: SLUTLÄSARE</p>
+              <h5>Vuxna 25 till 45 i relation</h5>
+              <p>Läser på mobilen, vill ha en snabb och rolig insikt och något att skicka till partnern.</p>
+            </div>
+            <div class="mini-card">
+              <p class="resume-tag">TERTIÄR</p>
+              <h5>Hundägare &amp; hundsugna</h5>
+              <p>Engagerade i ämnet och sprider gärna hundinnehåll vidare.</p>
+            </div>
+          </div>
+          <h4>Vad journalisten behöver för att säga ja</h4>
+          <ul>
+            <li>Nyheten i rubriken och första meningen, inte i tredje stycket.</li>
+            <li>Siffror med tydliga källor som går att kontrollera.</li>
+            <li>En lokal siffra för just deras bevakningsområde.</li>
+            <li>Någon att intervjua, och grafik de får använda.</li>
+            <li>Ärlighet om begränsningarna, så att de inte behöver rätta i efterhand.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="plan-item">
+        <summary><span class="plan-num">03</span><span class="plan-title">Kärnbudskap</span><span class="plan-hint">Vad ska fastna?</span><span class="plan-plus">+</span></summary>
+        <div class="plan-body">
+          <p class="plan-big">»Hundar räddar inte äktenskap. Men var du bor säger mycket om både hundar och kärlek.«</p>
+          <h4>Stödbudskap</h4>
+          <ul>
+            <li>I Vilhelmina, med 298 hundar per 1 000 invånare, varade äktenskapen som slutade i skilsmässa mer än dubbelt så länge som i Sundbyberg.</li>
+            <li>Sambandet hänger på två glesbygdskommuner. Utan dem är det svagt.</li>
+            <li>Förklaringen är troligen bostadsort och ålder, inte hundarna.</li>
+            <li>Samband är inte orsak. Det är en tumregel som gäller all statistik du ser.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="plan-item">
+        <summary><span class="plan-num">04</span><span class="plan-title">Kanaler &amp; format</span><span class="plan-hint">Var publiceras den?</span><span class="plan-plus">+</span></summary>
+        <div class="plan-body">
+          <table class="plan-table">
+            <thead><tr><th>Kanal</th><th>Format</th><th>Krok</th><th>Omfattning</th></tr></thead>
+            <tbody>
+              <tr><td>Pitch till riksmedia</td><td>Personlig e-post och länk till pressmaterial</td><td>Mytkrossare till Alla hjärtans dag</td><td>5 till 8 redaktioner</td></tr>
+              <tr><td>Pitch till lokalmedia</td><td>E-post med kommunens egen siffra</td><td>”Här håller kärleken längst/kortast”</td><td>11 redaktioner</td></tr>
+              <tr><td>Webb (denna sida)</td><td>Långläsning och pressrum</td><td>Hela storyn, navet som allt länkar till</td><td>1 sida</td></tr>
+              <tr><td>Instagram</td><td>Karusell 4:5 och stories</td><td>”Gissa kommunen där kärleken håller längst”</td><td>1 karusell, 3 stories</td></tr>
+              <tr><td>TikTok / Reels</td><td>Video 9:16, 20 till 30 sek</td><td>”Skaffa hund för att rädda äktenskapet? Vänta…”</td><td>1 till 2 klipp</td></tr>
+              <tr><td>LinkedIn</td><td>Textinlägg med diagram</td><td>Hur man undviker fel slutsats av data. Når även journalister.</td><td>1 inlägg</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+
+      <details class="plan-item">
+        <summary><span class="plan-num">05</span><span class="plan-title">Pressarbete</span><span class="plan-hint">Hur når vi redaktionerna?</span><span class="plan-plus">+</span></summary>
+        <div class="plan-body">
+          <ul>
+            <li><strong>Medielista:</strong> reportrar som skrivit om relationer, husdjur eller statistik, plus lokalredaktionerna i de elva kommunerna.</li>
+            <li><strong>Personligt utskick:</strong> en e-post per journalist, med vinkel anpassad efter deras bevakning. Inga massutskick.</li>
+            <li><strong>Exklusivitet:</strong> erbjud en riksredaktion storyn först, 24 timmar före övriga.</li>
+            <li><strong>Timing:</strong> skicka 7 till 10 dagar före Alla hjärtans dag, tisdag till torsdag på förmiddagen.</li>
+            <li><strong>Påminnelse:</strong> en kort uppföljning efter 3 dagar. Sedan inte fler.</li>
+            <li><strong>Tillgänglighet:</strong> svara samma dag och ta fram lokala siffror på begäran.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="plan-item">
+        <summary><span class="plan-num">06</span><span class="plan-title">Tidplan</span><span class="plan-hint">När händer vad?</span><span class="plan-plus">+</span></summary>
+        <div class="plan-body">
+          <ol class="timeline">
+            <li><span class="tl-when">Vecka 1</span>Research och data: hämta, matcha och räkna.</li>
+            <li><span class="tl-when">Vecka 2</span>Manus, grafik, pressmaterial och medielista.</li>
+            <li><span class="tl-when">Vecka 3</span>Faktagranskning. Pitch med exklusivitet skickas.</li>
+            <li><span class="tl-when">Ca 5 feb</span>Pitch till övriga redaktioner.</li>
+            <li class="is-launch"><span class="tl-when">14 feb</span>Medierna publicerar på Alla hjärtans dag. Egna sociala kanaler samma dag.</li>
+            <li><span class="tl-when">Dag 14</span>Utvärdering mot målen.</li>
+          </ol>
+          <p>Själva sidan publiceras redan nu, så att den finns som pressrum när pitchen skickas. Reservkrokar om Alla hjärtans dag inte fungerar: när SCB släpper ny statistik, eller ”valpsommaren”.</p>
+        </div>
+      </details>
+
+      <details class="plan-item">
+        <summary><span class="plan-num">07</span><span class="plan-title">Ton &amp; rubriker</span><span class="plan-hint">Hur låter det?</span><span class="plan-plus">+</span></summary>
+        <div class="plan-body">
+          <p><strong>Tonalitet:</strong> lekfull i kroken, saklig i analysen. Aldrig nedlåtande mot varken glesbygd eller storstad.</p>
+          <h4>Rubriker att testa</h4>
+          <div class="headline-ab">
+            <div><b>A</b><span>Skilsmässa eller hundvalp?<small>Nyfikenhet. Nuvarande rubrik, passar bäst i sociala kanaler.</small></span></div>
+            <div><b>B</b><span>I Vilhelmina håller äktenskapen dubbelt så länge. Här är varför<small>Konkret siffra och lokal vinkel. Passar bäst som ämnesrad i pitchen.</small></span></div>
+            <div><b>C</b><span>Nej, en hund räddar inte ditt äktenskap<small>Mytkrossare. Passar bäst för riksmedia.</small></span></div>
+          </div>
+          <p><strong>Regel:</strong> rubriken får locka, men aldrig påstå ett orsakssamband som texten sedan måste ta tillbaka. Journalister avfärdar pitchar som överdriver.</p>
+        </div>
+      </details>
+
+      <details class="plan-item">
+        <summary><span class="plan-num">08</span><span class="plan-title">Visuell plan</span><span class="plan-hint">Hur ser det ut?</span><span class="plan-plus">+</span></summary>
+        <div class="plan-body">
+          <ul>
+            <li><strong>Grafik:</strong> spridningsdiagram, nyckeltal och kommunlista med staplar.</li>
+            <li><strong>Pressgrafik:</strong> en neutral version utan portfoliots färger, så att redaktioner kan använda den i sin egen form.</li>
+            <li><strong>Format:</strong> 16:9 för webb och tv, 4:5 för Instagram, 9:16 för Reels och TikTok, 1:1 för LinkedIn.</li>
+            <li><strong>Tillgänglighet:</strong> alt-text på alla grafer, kontrast enligt WCAG AA, datan även som lista och animationer som stängs av vid ”minska rörelse”.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="plan-item">
+        <summary><span class="plan-num">09</span><span class="plan-title">Resurser &amp; roller</span><span class="plan-hint">Vem gör vad?</span><span class="plan-plus">+</span></summary>
+        <div class="plan-body">
+          <table class="plan-table">
+            <thead><tr><th>Uppgift</th><th>Ansvarig</th><th>Tid</th><th>Verktyg</th></tr></thead>
+            <tbody>
+              <tr><td>Dataanalys</td><td>Chatilla Nelsson</td><td>ca 6 h</td><td>Excel, Google Sheets</td></tr>
+              <tr><td>Text, pitch &amp; manus</td><td>Chatilla Nelsson</td><td>ca 6 h</td><td>Docs</td></tr>
+              <tr><td>Medielista &amp; utskick</td><td>Chatilla Nelsson</td><td>ca 4 h</td><td>E-post, kalkylark</td></tr>
+              <tr><td>Grafik &amp; video</td><td>Chatilla Nelsson</td><td>ca 8 h</td><td>Figma, CapCut</td></tr>
+              <tr><td>Webb</td><td>Chatilla Nelsson</td><td>ca 4 h</td><td>HTML/CSS, GitHub Pages</td></tr>
+              <tr><td>Uppföljning &amp; intervjuer</td><td>Chatilla Nelsson</td><td>ca 3 h</td><td>Telefon, GTM/GA4</td></tr>
+            </tbody>
+          </table>
+          <p class="plan-note">Tiderna är uppskattningar. Ersätt dem med faktisk tidsåtgång.</p>
+        </div>
+      </details>
+
+      <details class="plan-item">
+        <summary><span class="plan-num">10</span><span class="plan-title">KPI:er &amp; uppföljning</span><span class="plan-hint">Hur vet vi att det funkade?</span><span class="plan-plus">+</span></summary>
+        <div class="plan-body">
+          <table class="plan-table">
+            <thead><tr><th>KPI</th><th>Mål</th><th>Så mäts det</th></tr></thead>
+            <tbody>
+              <tr><td>Mediepubliceringar</td><td>3 (1 riks, 2 lokala)</td><td>Manuell bevakning, Google Alerts</td></tr>
+              <tr><td>Svar på pitch</td><td>25 %</td><td>Kalkylark över utskicket</td></tr>
+              <tr><td>Kontakt från press</td><td>30 klick</td><td>GTM-händelserna <code>press_contact</code> och <code>pitch_copy</code></td></tr>
+              <tr><td>Sidvisningar</td><td>2 000 på 14 dagar</td><td>GA4 via Google Tag Manager</td></tr>
+              <tr><td>Quizsvar</td><td>25 % av besökarna</td><td>GTM-händelsen <code>quiz_answer</code></td></tr>
+              <tr><td>Delningar</td><td>150</td><td>Sociala kanalers statistik och <code>share_click</code></td></tr>
+            </tbody>
+          </table>
+          <h4>Uppföljning</h4>
+          <ul>
+            <li><strong>Dag 3 efter utskick:</strong> en påminnelse till dem som inte svarat.</li>
+            <li><strong>Dag 14:</strong> utvärdera mot alla mål och skriv ner tre lärdomar till nästa story.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="plan-item">
+        <summary><span class="plan-num">11</span><span class="plan-title">Risker &amp; källkritik</span><span class="plan-hint">Vad kan gå fel?</span><span class="plan-plus">+</span></summary>
+        <div class="plan-body">
+          <table class="plan-table">
+            <thead><tr><th>Risk</th><th>Åtgärd</th></tr></thead>
+            <tbody>
+              <tr><td>Litet urval (11 av 290)</td><td>Skriv det tydligt i text och pitch. Nästa version: alla kommuner.</td></tr>
+              <tr><td>Två extremvärden styr r</td><td>Visa r både med och utan Vilhelmina och Härjedalen (0,86 mot 0,28). Det stärker trovärdigheten i stället för att försvaga den.</td></tr>
+              <tr><td>Urval ur topplistor</td><td>Kommunerna kommer från listornas ytterkanter: nio storstäder och två glesbygdskommuner, inga mellanstora orter. Det förstärker sambandet och ska sägas öppet.</td></tr>
+              <tr><td>Olika tidsperioder</td><td>Hunddatan gäller 2025, äktenskapsdatan är ett snitt för 2000 till 2023. Skriv ut båda perioderna.</td></tr>
+              <tr><td>Redan bevakat</td><td>SVT Västerbotten har skrivit om Vilhelminas långa äktenskap. Den nya vinkeln är kopplingen till hundar och förklaringen bakom, så lyft den i pitchen.</td></tr>
+              <tr><td>Media vinklar det som orsak</td><td>Förklaringen står i pitchens andra stycke och i fakta i korthet, inte bara längst ner.</td></tr>
+              <tr><td>Sekundärkällor</td><td>Båda dataseten är sammanställda av andra (Konsumentguiden och Länsförsäkringar). Siffrorna är kontrollerade mot dem. Nästa steg är att kontrollera mot Jordbruksverkets och SCB:s originaltabeller.</td></tr>
+              <tr><td>Otydligt mått</td><td>Förklara att ”äktenskapslängd” bara gäller äktenskap som slutade i skilsmässa.</td></tr>
+              <tr><td>Ort pekas ut</td><td>Neutral ton. Inga värderingar om ”bra” eller ”dåliga” kommuner.</td></tr>
+              <tr><td>Ingen redaktion nappar</td><td>Publicera ändå i egna kanaler och pitcha om vid nästa krok.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+
+      <details class="plan-item">
+        <summary><span class="plan-num">12</span><span class="plan-title">Call to action</span><span class="plan-hint">Vad ska läsaren göra?</span><span class="plan-plus">+</span></summary>
+        <div class="plan-body">
+          <div class="card-grid">
+            <div class="mini-card"><p class="resume-tag">JOURNALISTEN</p><h5>Hör av dig</h5><p>Beställ lokala siffror, boka intervju eller ladda ner materialet.</p></div>
+            <div class="mini-card"><p class="resume-tag">LÄSAREN</p><h5>Kolla din kommun</h5><p>Kommunlistan gör storyn personlig.</p></div>
+            <div class="mini-card"><p class="resume-tag">LÄSAREN</p><h5>Dela med någon</h5><p>”Skicka till någon du delar soffa med.”</p></div>
+          </div>
+        </div>
+      </details>
+
+    </div>
+  </section>
+
 
   <footer class="footer">
     <span>CHATILLA NELSSON PORTFOLIO © 2026</span>
     <a href="index.html#education">← BACK TO PORTFOLIO</a>
   </footer>
 
+<script>
+(function () {
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.dataLayer = window.dataLayer || [];
+
+  /* läsprogress */
+  var bar = document.querySelector('.read-progress');
+  function onScroll() {
+    var h = document.documentElement;
+    var p = h.scrollTop / (h.scrollHeight - h.clientHeight || 1);
+    bar.style.transform = 'scaleX(' + Math.min(1, Math.max(0, p)) + ')';
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* räkna upp nyckeltal */
+  function countUp(el) {
+    var target = parseFloat(el.dataset.count);
+    var dec = parseInt(el.dataset.decimals || '0', 10);
+    var fmt = function (v) { return v.toFixed(dec).replace('.', ','); };
+    if (reduceMotion) { el.textContent = fmt(target); return; }
+    var start = null;
+    function step(ts) {
+      if (!start) start = ts;
+      var t = Math.min(1, (ts - start) / 1400);
+      el.textContent = fmt(target * (1 - Math.pow(1 - t, 3)));
+      if (t < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  /* rita trendlinjen */
+  function drawTrend() {
+    var rect = document.getElementById('trend-clip-rect');
+    if (reduceMotion) { rect.setAttribute('width', 560); return; }
+    var start = null;
+    function step(ts) {
+      if (!start) start = ts;
+      var t = Math.min(1, (ts - start) / 1600);
+      rect.setAttribute('width', 560 * (1 - Math.pow(1 - t, 3)));
+      if (t < 1) requestAnimationFrame(step);
+    }
+    setTimeout(function () { requestAnimationFrame(step); }, 900);
+  }
+
+  /* scroll-reveal + triggers */
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      var el = e.target;
+      el.classList.add('visible', 'in-view');
+      if (el.id === 'chart') drawTrend();
+      el.querySelectorAll('[data-count]').forEach(countUp);
+      io.unobserve(el);
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+
+  /* quiz */
+  var btns = document.querySelectorAll('.quiz-btn');
+  var answer = document.querySelector('.quiz-answer');
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var right = b.dataset.answer === 'right';
+      btns.forEach(function (x) {
+        x.disabled = true;
+        if (x.dataset.answer === 'right') x.classList.add('is-right');
+      });
+      if (!right) b.classList.add('is-wrong');
+      answer.classList.add('is-open');
+      window.dataLayer.push({ event: 'quiz_answer', quiz_correct: right, quiz_choice: b.textContent });
+    });
+  });
+
+  /* dela */
+  var shareBtn = document.getElementById('share-btn');
+  var shareMsg = document.getElementById('share-msg');
+  shareBtn.addEventListener('click', function () {
+    window.dataLayer.push({ event: 'share_click' });
+    var data = { title: document.title, text: 'Skilsmässa eller hundvalp? Kolla var din kommun hamnar 🐶', url: location.href };
+    if (navigator.share) { navigator.share(data).catch(function () {}); return; }
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(location.href).then(function () {
+        shareMsg.classList.add('is-on');
+        setTimeout(function () { shareMsg.classList.remove('is-on'); }, 2200);
+      });
+    }
+  });
+
+  /* kopiera pitch */
+  var copyPitch = document.getElementById('copy-pitch');
+  copyPitch.addEventListener('click', function () {
+    window.dataLayer.push({ event: 'pitch_copy' });
+    if (!navigator.clipboard) return;
+    var text = document.getElementById('pitch-text').innerText.replace(/FYLL I/g, '').trim();
+    navigator.clipboard.writeText(text).then(function () {
+      copyPitch.textContent = 'KOPIERAT ✓';
+      setTimeout(function () { copyPitch.textContent = 'KOPIERA TEXTEN'; }, 2000);
+    });
+  });
+
+  document.getElementById('press-contact').addEventListener('click', function () {
+    window.dataLayer.push({ event: 'press_contact' });
+  });
+
+  /* öppna/stäng alla i planen */
+  var toggleAll = document.getElementById('plan-toggle-all');
+  var items = document.querySelectorAll('.plan-item');
+  toggleAll.addEventListener('click', function () {
+    var open = Array.prototype.some.call(items, function (d) { return !d.open; });
+    items.forEach(function (d) { d.open = open; });
+    toggleAll.textContent = open ? 'STÄNG ALLA −' : 'ÖPPNA ALLA +';
+  });
+})();
+</script>
 </body>
 </html>
