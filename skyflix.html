@@ -3,12 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SkyFlix — Mashup av två API:er — Chatilla Nelsson</title>
+<title>SkyFlix | Webbapp med väderdata från API | Chatilla Nelsson</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link href="style.css" rel="stylesheet" />
 <link href="case.css" rel="stylesheet" />
+<link href="skyflix-app.css" rel="stylesheet" />
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -36,16 +37,62 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span class="ghost" aria-hidden="true">SKYFLIX</span>
     <span class="mark" aria-hidden="true">CN</span>
 
-    <p class="section-num">API-MASHUP · PAPER PROTOTYPE</p>
+    <p class="section-num">WEBBAPP · API · PROTOTYP</p>
     <h1 class="case-hero-title">SkyFlix</h1>
     <p class="case-hero-sub"><em>Vädret bestämmer vilken film som känns rätt ikväll.</em></p>
-    <p class="case-hero-body">Ett skolprojekt från Berghs Growth Marketing: en pappersprototyp som kombinerar väderdata med filmdata till en enda lösning. Idén, matchningslogiken och skisserna nedan är mitt eget arbete.</p>
+    <p class="case-hero-body">Ett skolprojekt från Berghs Growth Marketing som började som en pappersprototyp och nu är en fungerande webbapp. Appen hämtar vädret live från Open-Meteos API och föreslår filmer som matchar. Idén, matchningslogiken och skisserna är mitt eget arbete.</p>
 
     <div class="cta-row" style="margin-top: 2rem;">
-      <span class="case-tag-pill">Open-Meteo — väderdata</span>
-      <span class="case-tag-pill">TMDB — filmdata</span>
+      <a href="#app" class="case-tag-pill" style="text-decoration:none">Prova appen live ↓</a>
+      <span class="case-tag-pill">Open-Meteo: väderdata</span>
     </div>
   </header>
+
+  <!-- LIVE-APPEN -->
+  <section class="section slide slide--pink" id="app">
+    <p class="section-num">LIVE-APPEN</p>
+    <h2 class="section-title">Vad ska du se<br><em>ikväll?</em></h2>
+    <p class="section-body">Sök på en ort eller dela din position. Appen hämtar vädret just nu från Open-Meteo och väljer filmer efter matchningslogiken från prototypen.</p>
+
+    <div class="sf-controls">
+      <form class="sf-search" id="sf-search" role="search">
+        <label for="sf-city" class="visually-hidden" style="position:absolute;left:-9999px">Ort</label>
+        <input id="sf-city" type="search" placeholder="Sök ort, t.ex. Göteborg" autocomplete="off">
+        <button type="submit" class="sf-btn">SÖK</button>
+      </form>
+      <button type="button" class="sf-btn sf-btn--ghost" id="sf-geo">📍 ANVÄND MIN PLATS</button>
+    </div>
+    <p class="sf-status" id="sf-status" aria-live="polite"></p>
+
+    <div class="sf-result" id="sf-result" hidden aria-live="polite">
+      <div class="sf-weather">
+        <p class="sf-place" id="sf-place"></p>
+        <div class="sf-now">
+          <span class="sf-icon" id="sf-icon" aria-hidden="true"></span>
+          <span class="sf-temp" id="sf-temp"></span>
+        </div>
+        <p class="sf-desc" id="sf-desc"></p>
+        <ul class="sf-details" id="sf-details"></ul>
+        <p class="sf-updated" id="sf-updated"></p>
+      </div>
+
+      <div class="sf-match">
+        <div class="sf-match-head">
+          <p class="resume-tag">VÄDRET SÄGER</p>
+          <span class="sf-mood" id="sf-mood"></span>
+          <span class="sf-arrow" aria-hidden="true">→</span>
+          <span class="sf-genre" id="sf-genre"></span>
+        </div>
+        <ul class="sf-films" id="sf-films"></ul>
+        <div class="sf-more-row">
+          <button type="button" class="sf-btn" id="sf-more">NYA FÖRSLAG ↻</button>
+          <p class="sf-credit">Väderdata: <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo.com</a> (CC BY 4.0)</p>
+        </div>
+      </div>
+    </div>
+
+    <noscript><p class="sf-status is-error">Appen behöver JavaScript för att hämta vädret.</p></noscript>
+  </section>
 
   <section class="section slide slide--pink">
     <p class="section-num">PROBLEM + LÖSNING</p>
@@ -64,20 +111,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
 
   <section class="section slide slide--red">
-    <p class="section-num">DE TVÅ API:ERNA</p>
+    <p class="section-num">DATAN BAKOM</p>
     <h2 class="section-title">Väderdata möter <em>filmdata.</em></h2>
-    <p class="section-body">Två fristående API:er, matchade ihop av SkyFlix egen logik.</p>
+    <p class="section-body">Appen anropar två endpoints hos Open-Meteo. Filmerna kommer från en egen lista som följer prototypens genrer.</p>
 
     <div class="info-cards-row">
       <div class="info-card" style="text-align: left;">
-        <p class="resume-tag">GRATIS · INGEN NYCKEL</p>
+        <p class="resume-tag">API · GRATIS · INGEN NYCKEL</p>
         <h3>Open-Meteo</h3>
-        <p>Aktuell temperatur · Molntäckning i procent · Nederbörd · Väderkod (klart, regn, åska, snö)</p>
+        <p><strong>Forecast API:</strong> aktuell temperatur, upplevd temperatur, molntäckning, nederbörd, vind och väderkod (klart, regn, åska, snö).<br><strong>Geocoding API:</strong> gör om ortnamnet du söker på till koordinater.</p>
       </div>
       <div class="info-card" style="text-align: left;">
-        <p class="resume-tag">GRATIS NYCKEL</p>
-        <h3>TMDB</h3>
-        <p>Filmer filtrerade på genre · Sorterat på popularitet/betyg · Posterbild · Titel och kort beskrivning</p>
+        <p class="resume-tag">PROTOTYP: TMDB · LIVE: EGEN LISTA</p>
+        <h3>Filmerna</h3>
+        <p>I prototypen hämtades filmerna från TMDB. TMDB kräver en API-nyckel, och på en publik sajt skulle nyckeln synas för alla. Därför använder live-appen en egen lista med sex filmer per genre.</p>
       </div>
     </div>
 
@@ -91,6 +138,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="source-row match-row"><span>⛈️ Åska / storm</span><span class="match-pill">Skräck / Thriller</span></div>
       <div class="source-row match-row"><span>❄️ Snö</span><span class="match-pill">Animerat / Familj</span></div>
     </div>
+    <p class="section-body" style="margin-top: 1.5rem;">I koden avgörs det av väderkoden och temperaturen, i den här ordningen: åska, snö, regn eller duggregn, klart eller halvklart med minst 15 grader. Allt annat, som mulet, dimma eller klart men kallt, räknas som mulet och svalt.</p>
   </section>
 
   <section class="section slide slide--pink">
@@ -147,6 +195,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     document.getElementById('slide-next').addEventListener('click', () => show(current + 1));
     thumbs.forEach(t => t.addEventListener('click', () => show(Number(t.getAttribute('data-index')))));
   </script>
+  <script src="skyflix-app.js"></script>
 
 </body>
 </html>
